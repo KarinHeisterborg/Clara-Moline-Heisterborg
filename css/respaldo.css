@@ -1,0 +1,149 @@
+
+       
+        legend {
+          font-size: 40px;
+          color: #839192;
+          text-decoration: none; 
+        }
+        
+        .fieldsetDetails {
+          display: inline-block;
+        }
+        
+        
+        .socialMediaDiv {
+          grid-area: socialMediaDiv;
+        }     
+        .socialMediaDiv2 {
+          grid-area: socialMediaDiv2;
+        }
+        .socialMediaDiv {
+          color:  #aab7b8;
+          font-size: 20px;
+          margin: 5px; 
+          padding: 5px;
+        }
+      
+        .socialMediaDiv2 a {
+          color:  #aab7b8;
+          font-size: 20px;
+          text-decoration: none;
+        }
+        
+        
+      
+      
+      
+      
+      
+      @media only screen and (max-width: 768px) {
+        .container {
+      
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr 3fr 1fr;
+          
+          width: 700px;
+          gap: 2px 2px;
+          grid-auto-flow: row;
+          justify-content: end;
+          grid-template-areas:
+            "header"
+            "Main"
+            "footer";
+            
+        }
+        .Main  {
+      
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 0.1fr 2fr;
+          gap: 0px 0px;
+          grid-auto-flow: row;
+          grid-template-areas:
+            "mainTitle"
+            "aboutMeP";
+          grid-area: Main;
+            
+        }
+        .mainTitle { grid-area: mainTitle; }
+                
+        .aboutMeP { grid-area: aboutMeP; }
+            
+        .footer { grid-area: footer; }
+            
+        .header {  
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr 1fr;
+          gap: 0px 0px;
+          
+          grid-auto-flow: row;
+          
+          grid-template-areas:
+            "."
+            ".";
+          grid-area: header
+        }
+        .aboutMeP {  
+          font-size: 16px;
+        }
+        h1 {
+          font-size: 20px;   
+        }
+        .header { 
+          justify-self: start;   
+          margin-left: 10px;
+                  }
+        .navMenu { 
+          justify-self: center;
+          margin-left: 10px;
+        }
+      }
+      
+      @media only screen and (max-width: 400px) {
+          
+        .container {
+          width: 100%;
+        }
+        .Main {
+          display: grid; 
+          grid-template-columns: 1fr; 
+          grid-template-rows: 0.5fr 2fr; 
+          gap: 0px 0px; 
+          grid-template-areas: 
+            "mainTitle"
+            "aboutMeP"; 
+          grid-area: Main; 
+        }
+        .mainTitle { grid-area: mainTitle; }
+        .aboutMeP { grid-area: aboutMeP; }
+        .footer { grid-area: footer; }
+        .header {
+          display: grid; 
+          grid-template-columns: 1fr; 
+          grid-template-rows: 1fr 1fr; 
+          gap: 0px 0px; 
+          grid-template-areas: 
+            "."
+            "."; 
+          grid-area: header; 
+        }
+        .aboutMeP {  
+          font-size: 18px;
+        }
+        h1 {
+          font-size: 16px;   
+        }
+        .header { 
+          justify-self: start;   
+          margin: left 3px;
+        }
+        .navMenu { 
+          justify-self: start;
+          margin-left: 3px;
+        }
+          
+      
+      }
+      
